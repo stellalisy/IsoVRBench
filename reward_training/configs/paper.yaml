@@ -1,0 +1,10 @@
+# The recipe behind the models in the paper.
+#
+# Only the fields that differ from default.yaml, which is the base every config
+# is layered on and where every field is explained.
+
+# Effective batch 32 came from one pair per device across 32 GPUs with no
+# accumulation. On fewer cards raise accum to match: the objective is sensitive
+# to the effective batch, not to how it is split.
+accum: 32
+epochs: 3

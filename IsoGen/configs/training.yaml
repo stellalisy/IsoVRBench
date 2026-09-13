@@ -1,0 +1,8 @@
+# The training corpus.
+#
+# Only the fields that differ from benchmark.yaml, which is the base every
+# config is layered on and where every field is explained.
+
+# A milder visual degradation than the benchmark setting of 8. The two are
+# about 13 points of model accuracy apart on the same items.
+vq_steps: 16

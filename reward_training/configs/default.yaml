@@ -1,0 +1,67 @@
+# One GPU, LoRA, a single pass over the corpus.
+#
+# This file carries every setting with its explanation. The other configs in
+# this directory are layered on top of it and list only what they change.
+# Anything here can also be overridden without editing a file:
+#
+#   python train.py --set lora=false --set frames=16
+
+# ---- where the pairs come from ---------------------------------------------
+# Out of the box this is example_data, 64 pairs over 8 prompts that ship with
+# the repository. Enough to check that training runs, not enough to train
+# anything. Relative paths are taken from the repository root.
+pairs: example_data/pairs.jsonl
+# Directory the `path` fields in `pairs` are relative to.
+videos: example_data/videos
+# Where the validation clips are, if they sit apart from the training ones, as
+# they do in the corpus. Empty means the same directory.
+val_videos: ""
+# For the full corpus, point `pairs` at a corpus.jsonl and `videos` at the
+# clips it names. The corpus behind the paper is 164,000 pairs at
+# huggingface.co/datasets/stellalisy/IsoVGRBench-corpus.
+# Which records to train on. The corpus is split by prompt rather than by pair,
+# because several families re-pair the same anchor and splitting by pair would
+# leave both clips of a held out pair in training under a different pairing.
+split: train
+# Scored at every save. Empty skips validation.
+val_split: val
+
+# ---- what to start from ----------------------------------------------------
+# Any vision language backbone transformers can load. The paper uses the
+# instruct variant because VideoReward does, which keeps the comparison to it a
+# comparison of supervision rather than of initialisation.
+model: Qwen/Qwen2-VL-2B-Instruct
+
+# ---- LoRA or full finetune -------------------------------------------------
+# LoRA trains an adapter and leaves the backbone frozen, which fits a 2B model
+# on one card. false means every parameter moves and you want several.
+lora: true
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+# The reward head and the token embeddings stay out of the adapter: the head is
+# new and must train, and the embeddings were resized for the marker tokens.
+lora_targets: [q_proj, k_proj, v_proj, o_proj]
+
+# ---- what the model sees ---------------------------------------------------
+# Frames sampled uniformly from each clip. More is slower and, past a point,
+# does not help: the two models sampling 48 frames rank fifth and seventh on
+# held frames while the best samples ten.
+frames: 8
+# Dimensions the head is read on, one marker token each. A pair contributes
+# loss only on the dimensions its intervention labels.
+dims: [VQ, MQ, TA]
+
+# ---- optimisation ----------------------------------------------------------
+lr: 2.0e-6
+epochs: 1
+batch: 1
+accum: 8              # effective batch is batch * accum * n_gpus
+warmup_ratio: 0.05
+grad_clip: 1.0
+bf16: true
+
+# ---- bookkeeping -----------------------------------------------------------
+seed: 42
+log_every: 25
+save_every: 0         # 0 saves only at the end

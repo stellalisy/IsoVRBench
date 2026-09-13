@@ -1,0 +1,10 @@
+# Every parameter moves, rather than a LoRA adapter.
+#
+# Only the fields that differ from default.yaml, which is the base every config
+# is layered on and where every field is explained.
+#
+# Wants several cards. The lower learning rate is not optional: at the LoRA
+# rate a full finetune of a 2B backbone diverges.
+lora: false
+lr: 5.0e-7
+accum: 16

@@ -1,0 +1,68 @@
+IsoVGRBench example data
+==========================================================================
+
+Source   Prompts are from VidProM (VidProM_semantic_unique.csv),
+         filtered and deduplicated into our prompt pool v2.0.
+Contents videos/<pid>/ holds one clip per intervention. s50.mp4 is the
+         anchor; each other file is one controlled change to it, and the
+         pair (anchor, variant) is one benchmark item.
+
+Prompts naming a trademarked character or a real person are excluded.
+Every prompt here carries all eight interventions. Two things disqualify
+a prompt from appearing at all: wording that offers fewer than three
+disjoint attribute swaps, which leaves no edited prompt for ta_attrib,
+and an anchor that moves too little for a reordering to be visible,
+which leaves no shuffle pair.
+
+  s50.mp4             anchor, 50 denoising steps
+  vq_steps_k8.mp4     vq_steps, 8 denoising steps, prompt and seed fixed
+  mq_gen.mp4          mq_gen, motion between real keyframes regenerated
+  mq_hold.mp4         mq_hold, frames of the anchor held, giving stuttering motion
+  shuffle.mp4         shuffle, anchor cut into six segments and reordered
+  size_i2v.mp4        size_i2v, Wan2.2-TI2V-5B continuing the anchor's first frame
+  size_5b.mp4         size_5b, Wan2.2-TI2V-5B from the prompt
+  size_1p3b.mp4       size_1p3b, Wan2.1-T2V-1.3B
+  ta_attrib.mp4       ta_attrib, three prompt attributes rewritten, then rendered
+
+==========================================================================
+
+p003441
+  prompt   A basketball player flexibly dodges opponents during the game
+  edited   A chess player flexibly dodges opponents during the game
+  order    segments 4 1 6 5 3 2  (shuffle.mp4)
+
+p017149
+  prompt   Create_4k_3D_animation Transition to a playful group of 3D animated monkeys swinging from the trees, displaying their acrobatics. Cartoon Character highly detailed
+  edited   Create_4k_3D_animation Transition to a playful group of LIVE ACTION FOOTAGE animated monkeys swinging from the trees, displaying their acrobatics. Cartoon Character highly detailed
+  order    segments 3 5 2 6 1 4  (shuffle.mp4)
+
+p030135
+  prompt   Sea Monster attacking a ship full of penguins
+  edited   Desert Armoured cyborg attacking a freight train full of penguins
+  order    segments 5 6 4 2 3 1  (shuffle.mp4)
+
+p046256
+  prompt   a maze-like, surreal world made of colorful yarn
+  edited   a maze-like, surreal world made of washed-out desaturated yarn
+  order    segments 6 5 4 3 2 1  (shuffle.mp4)
+
+p063330
+  prompt   found footage, old footage, of a man using real superpowers, 50s, detailed, highres, black and white, old video, details, realistic, real
+  edited   found footage, middle-aged footage, of a man using real superpowers, 50s, detailed, highres, neon rainbow colours, middle-aged video, details, claymation, real
+  order    segments 3 1 2 6 4 5  (shuffle.mp4)
+
+p070002
+  prompt   maximalist a large flock of birds and other creatures, in the style of colorful mindscapes, dreamscapes, tangled nests, emily balivet, sharp focus, emitting diodes, smoke, artillery, sparks, rutkowski repin artstation hyperrealism painting concept art of detailed character design matte painting, 4 k resolution blade runner
+  edited   maximalist a large flock of birds and other creatures, in the style of sepia mindscapes, dreamscapes, tangled nests, emily balivet, sharp focus, emitting diodes, flames, artillery, sparks, rutkowski repin artstation claymation painting concept art of detailed character design matte painting, 4 k resolution blade runner
+  order    segments 6 4 5 2 1 3  (shuffle.mp4)
+
+p070113
+  prompt   medium shots of various groups dancing energetically around the city
+  edited   medium shots of various groups swimming energetically around the open ocean
+  order    segments 3 6 4 5 2 1  (shuffle.mp4)
+
+p073583
+  prompt   profile view of pedestrians walking on a street, side view of flow of pedestrians walking on crowded city sidewalk, in the style of human forms in motion, working class subjects, human-canvas integration, wimmelbilder
+  edited   profile view of pedestrians walking on a street, side view of flow of pedestrians walking on near-empty open ocean sidewalk, in the style of human forms in motion, working class subjects, human-canvas integration, wimmelbilder
+  order    segments 5 6 4 2 1 3  (shuffle.mp4)
+

@@ -1,0 +1,17 @@
+# Pinned to the versions IsoGen was tested on. All eight families were
+# generated end to end with exactly these.
+
+# mq_hold and shuffle rearrange the anchor's own frames. They need nothing
+# below this line, and run with torch absent.
+numpy==2.5.3
+pillow==12.3.0
+pyyaml==6.0.3
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+
+# the six families that render video
+torch==2.6.0
+diffusers==0.40.0
+transformers==5.17.0
+accelerate==1.15.0
+ftfy==6.3.1          # diffusers reaches for it while cleaning the prompt

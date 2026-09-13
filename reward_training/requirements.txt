@@ -1,0 +1,15 @@
+# Pinned to the versions the trainer was tested on.
+#
+# transformers is held at 4.x here while IsoGen runs on 5.x. The two were
+# validated separately and are not known to work on one version, so keep them
+# in separate environments.
+numpy==2.5.3
+pillow==12.3.0
+pyyaml==6.0.3
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+torch==2.6.0
+transformers==4.46.3
+accelerate==1.15.0
+peft==0.20.0
+huggingface-hub

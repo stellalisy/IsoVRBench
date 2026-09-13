@@ -1,0 +1,4 @@
+# Running the benchmark needs almost nothing. Scoring a clip is your model's
+# job, so install whatever it needs alongside these.
+numpy==2.5.3
+huggingface-hub

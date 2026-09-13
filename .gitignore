@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+pairs/
+out/
+*.mp4
+
+# the example clips are the point of example_data
+!example_data/videos/**/*.mp4
