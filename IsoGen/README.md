@@ -4,7 +4,7 @@ Turn a text prompt into a pair of videos that differ in exactly one respect, so
 the preference label follows from what was changed rather than from anyone
 judging the result.
 
-These are the eight interventions behind [IsoVGRBench](../IsoVGRBench) and its
+These are the eight interventions behind [IsoVRBench](../IsoVRBench) and its
 training corpus. Prompts can come from anywhere; ours are VidProM. So can the
 videos: the generators are a config field, and two families need no generator
 at all.
@@ -193,7 +193,7 @@ difficulty axis while the construction stays identical.
 | `num_frames` | fewer | affects every family; shortens segments and held runs |
 
 `configs/benchmark.yaml` carries every field with its explanation and is what
-IsoVGRBench ships with. `configs/training.yaml` is layered on top of it and
+IsoVRBench ships with. `configs/training.yaml` is layered on top of it and
 lists only what it changes, which for the training corpus is `vq_steps` alone.
 Copy either one and edit it:
 

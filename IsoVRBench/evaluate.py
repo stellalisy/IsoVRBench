@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a reward model on IsoVGRBench.
+"""Run a reward model on IsoVRBench.
 
 Fetches the benchmark, scores every clip with your model, and prints accuracy
 per intervention.
@@ -48,7 +48,7 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--model", required=True, help="module:function")
-    ap.add_argument("--data", default="IsoVGRBench",
+    ap.add_argument("--data", default="IsoVRBench",
                     help="where to put or find the benchmark")
     ap.add_argument("--repo", default="stellalisy/IsoVGRBench")
     ap.add_argument("--scores", default="scores.jsonl")

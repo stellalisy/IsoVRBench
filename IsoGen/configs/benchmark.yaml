@@ -1,4 +1,4 @@
-# What IsoVGRBench ships with.
+# What IsoVRBench ships with.
 #
 # Each family has a knob controlling how severe its degradation is. Change one
 # and the same code produces an easier or harder pair.
@@ -44,7 +44,7 @@ shuffle_segments: 6
 # this are skipped. Higher keeps fewer, clearer pairs. 25 keeps about 23 percent
 # of anchors; the median generated clip scores around 12.
 #
-# IsoVGRBench itself was not built with a threshold. It took the 1,000 highest
+# IsoVRBench itself was not built with a threshold. It took the 1,000 highest
 # motion anchors, which put its floor at 18.3 and its median at 24.6. Set this
 # to 18.3 to approximate that selection.
 shuffle_motion_min: 25.0

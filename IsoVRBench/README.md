@@ -1,8 +1,9 @@
-# IsoVGRBench
+# IsoVRBench
 
-16,000 pairs built by [IsoGen](../IsoGen), in two subsets of 8,000.
+The benchmark is 8,000 pairs built by [IsoGen](../IsoGen). The dataset also ships a second,
+**conflicted** subset of 8,000 pairs for analysis, described below.
 
-The **isolated** subset is 8,000 pairs over eight interventions, 1,000 each.
+The **isolated** subset, the benchmark itself, is 8,000 pairs over eight interventions, 1,000 each.
 One clip was changed in exactly one respect, so the correct answer follows from
 the construction rather than from anyone judging the result.
 

@@ -1,4 +1,4 @@
-IsoVGRBench example data
+IsoVRBench example data
 ==========================================================================
 
 Source   Prompts are from VidProM (VidProM_semantic_unique.csv),

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reference scorer for IsoVGRBench.
+"""Reference scorer for IsoVRBench.
 
 You supply one score per clip; this reproduces every number the paper reports.
 
