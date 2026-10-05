@@ -18,7 +18,7 @@ videos: example_data/videos
 val_videos: ""
 # For the full corpus, point `pairs` at a corpus.jsonl and `videos` at the
 # clips it names. The corpus behind the paper is 164,000 pairs at
-# huggingface.co/datasets/stellalisy/IsoVGRBench-corpus.
+# huggingface.co/datasets/stellalisy/IsoVRBench-corpus.
 # Which records to train on. The corpus is split by prompt rather than by pair,
 # because several families re-pair the same anchor and splitting by pair would
 # leave both clips of a held out pair in training under a different pairing.

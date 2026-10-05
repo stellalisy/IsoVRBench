@@ -50,7 +50,7 @@ def main():
     ap.add_argument("--model", required=True, help="module:function")
     ap.add_argument("--data", default="IsoVRBench",
                     help="where to put or find the benchmark")
-    ap.add_argument("--repo", default="stellalisy/IsoVGRBench")
+    ap.add_argument("--repo", default="stellalisy/IsoVRBench")
     ap.add_argument("--scores", default="scores.jsonl")
     ap.add_argument("--subset", choices=("isolated", "conflicted", "both"),
                     default="isolated")

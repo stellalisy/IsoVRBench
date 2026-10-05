@@ -23,7 +23,7 @@ dimension prefers. It is the form IsoGen writes and the form the corpus ships
 in. `videos` is the directory those paths are relative to.
 
 The corpus behind the paper is 164,000 pairs at
-[stellalisy/IsoVGRBench-corpus](https://huggingface.co/datasets/stellalisy/IsoVGRBench-corpus),
+[stellalisy/IsoVRBench-corpus](https://huggingface.co/datasets/stellalisy/IsoVRBench-corpus),
 split 160,000 training and 4,000 validation, prompt disjoint from each other
 and from the benchmark. It is metadata only, so the clips have to come from
 somewhere `videos` can reach. Its validation clips sit in their own tree, which

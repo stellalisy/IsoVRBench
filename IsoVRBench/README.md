@@ -15,7 +15,7 @@ the same prompts, and do have a correct answer. What a competing cue costs is
 the difference between the two.
 
 The data lives at
-[stellalisy/IsoVGRBench](https://huggingface.co/datasets/stellalisy/IsoVGRBench).
+[stellalisy/IsoVRBench](https://huggingface.co/datasets/stellalisy/IsoVRBench).
 
 ## Run it
 
