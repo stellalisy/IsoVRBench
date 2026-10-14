@@ -9,6 +9,7 @@
 
 <sup>1</sup>University of Washington &nbsp;&nbsp; <sup>2</sup>Meta FAIR &nbsp;&nbsp; <sup>†</sup>Equal last author
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.17234-b31b1b.svg)](https://arxiv.org/abs/2610.17234)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-IsoVRBench-yellow)](https://huggingface.co/datasets/stellalisy/IsoVRBench)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
@@ -158,11 +159,14 @@ training and validation.
 ## Citation
 
 ```bibtex
-@misc{li2026isovrbench,
-  title  = {IsoVRBench: Video Reward Modeling Without Human Feedback},
-  author = {Li, Shuyue Stella and He, Jacqueline and Chen, Jiahui and Dutta Roy, Sreya and
-            Tsvetkov, Yulia and Zettlemoyer, Luke and Ghazvininejad, Marjan and Han, Xiaochuang},
-  year   = {2026}
+@misc{li2026isovrbenchvideorewardmodeling,
+      title={IsoVRBench: Video Reward Modeling Without Human Feedback}, 
+      author={Shuyue Stella Li and Jacqueline He and Jiahui Chen and Sreya Dutta Roy and Yulia Tsvetkov and Luke Zettlemoyer and Marjan Ghazvininejad and Xiaochuang Han},
+      year={2026},
+      eprint={2610.17234},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2610.17234}, 
 }
 ```
 
