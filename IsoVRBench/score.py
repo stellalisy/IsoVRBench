@@ -14,26 +14,14 @@ pair is then read on the head named by its `scored_on` field:
 
     {"path": "...", "prompt": "...", "VQ": 0.1, "MQ": -0.3, "TA": 0.8}
 
-The key is (path, prompt), not path. Every path in the released data carries
-exactly one prompt, so path alone would work; the prompt is in the key because
-the score depends on it.
+The key is (path, prompt), not path, because a score depends on the prompt as
+well as the clip.
 
-Two conventions are reported for the isolated subset, over each
-intervention's 1,000 pairs:
+Two conventions are reported. `ties_wrong` is the
+paper's main table: every pair carries an intervention a person can see, so
+scoring the two clips equally is a failure to perceive it. `decided` drops ties
+and is the convention VideoGen-RewardBench uses.
 
-    ties_wrong = correct / n           a tie counts as an error
-    decided    = correct / (n - ties)  ties dropped
-
-`ties_wrong` is the paper's main table: every pair carries an intervention a
-person can see, so scoring the two clips equally is a failure to perceive it.
-`decided` is the convention VideoGen-RewardBench uses. The reported average is
-the mean of the eight per-intervention accuracies, not correct / 8000.
-
-The conflicted subset is 4,000 conflict pairs and 4,000 matched controls. The
-controls have a correct answer and are scored as above. The conflict pairs have
-none, and what is reported for them is the follow rate: of the decided pairs,
-the fraction where the model's preferred side is the side that dimension
-favours. Subtracting the matched control gives what the competing cue costs.
 """
 import argparse
 import collections
@@ -105,50 +93,6 @@ def isolated(recs, scores, head_mode):
             "average_decided": round(sum(dc) / len(dc), 2) if dc else None}
 
 
-def conflicted(recs, scores, head_mode):
-    ctrl = collections.defaultdict(lambda: [0, 0])
-    for r in recs:
-        if r["intervention"].startswith("ctrl_"):
-            p = pref(scores, r, head_mode)
-            if p in ("A", "B"):
-                ctrl[r["intervention"]][1] += 1
-                ctrl[r["intervention"]][0] += (p == r["correct"])
-
-    out = {"controls": {k: round(100 * a / n, 2) if n else None
-                        for k, (a, n) in sorted(ctrl.items())},
-           "oppositions": {}}
-
-    for r in recs:
-        fam = r["intervention"]
-        if not fam.startswith("conflict_"):
-            continue
-        p = pref(scores, r, head_mode)
-        if p not in ("A", "B"):
-            continue
-        d = out["oppositions"].setdefault(
-            fam, {"n": 0, "follows": collections.Counter()})
-        d["n"] += 1
-        for dim, side in r["favours"].items():
-            if side == p:
-                d["follows"][dim] += 1
-
-    for fam, d in out["oppositions"].items():
-        n = d["n"]
-        d["follow_rate"] = {k: round(100 * v / n, 2) for k, v in d["follows"].items()}
-        # the matched control measures the same dimension with nothing opposing
-        # it, so the difference is the cost of the competing cue
-        d["vs_control"] = {}
-        for cname in next(x["matched_controls"] for x in recs
-                          if x["intervention"] == fam):
-            dim = cname.split("_")[1]
-            base = out["controls"].get(cname)
-            got = d["follow_rate"].get(dim)
-            if base is not None and got is not None:
-                d["vs_control"][cname] = round(got - base, 2)
-        del d["follows"]
-    return out
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--scores", required=True)
@@ -166,8 +110,6 @@ def main():
         "n_scored_clips": len(sc),
         "isolated": isolated(read_jsonl(os.path.join(a.data, "isolated.jsonl")),
                              sc, hm),
-        "conflicted": conflicted(read_jsonl(os.path.join(a.data, "conflicted.jsonl")),
-                                 sc, hm),
     }
     # The commonest first-run mistake is scoring by path and omitting the
     # prompt, which makes every lookup miss. Say so rather than printing nulls.

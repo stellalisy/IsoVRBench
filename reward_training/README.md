@@ -22,12 +22,19 @@ python train.py --pairs my_pairs.jsonl --videos my_clips/ --out ckpt/
 dimension prefers. It is the form IsoGen writes and the form the corpus ships
 in. `videos` is the directory those paths are relative to.
 
-The corpus behind the paper is 164,000 pairs at
-[stellalisy/IsoVRBench-corpus](https://huggingface.co/datasets/stellalisy/IsoVRBench-corpus),
-split 160,000 training and 4,000 validation, prompt disjoint from each other
-and from the benchmark. It is metadata only, so the clips have to come from
-somewhere `videos` can reach. Its validation clips sit in their own tree, which
-is what `val_videos` is for.
+The corpus behind the paper is the train and validation splits of
+[stellalisy/IsoVRBench](https://huggingface.co/datasets/stellalisy/IsoVRBench),
+160,000 training and 4,000 validation pairs, prompt disjoint from each other
+and from the benchmark. Their clips are in the tar shards under
+`train/shards/`. Extract them into one directory and point `videos` at it:
+
+```bash
+huggingface-cli download stellalisy/IsoVRBench --repo-type dataset \
+  --include "data/*" "train/*" --local-dir isovrbench
+mkdir -p clips && for t in isovrbench/train/shards/*.tar; do tar -xf "$t" -C clips; done
+python train.py --config paper --pairs isovrbench/data/train.jsonl \
+  --set val_pairs=isovrbench/data/validation.jsonl --videos clips --out ckpt/
+```
 
 The split is on prompt rather than on pair. Several families re-pair the same
 anchor, so holding out a pair would leave both its clips in training under a

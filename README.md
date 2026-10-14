@@ -9,8 +9,7 @@
 
 <sup>1</sup>University of Washington &nbsp;&nbsp; <sup>2</sup>Meta FAIR &nbsp;&nbsp; <sup>†</sup>Equal last author
 
-[![Benchmark](https://img.shields.io/badge/%F0%9F%A4%97%20Benchmark-IsoVRBench-yellow)](https://huggingface.co/datasets/stellalisy/IsoVRBench)
-[![Corpus](https://img.shields.io/badge/%F0%9F%A4%97%20Training%20corpus-160K%20pairs-yellow)](https://huggingface.co/datasets/stellalisy/IsoVRBench-corpus)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-IsoVRBench-yellow)](https://huggingface.co/datasets/stellalisy/IsoVRBench)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 </div>
@@ -136,7 +135,7 @@ python IsoGen/generate.py --prompts IsoGen/example_prompts.txt --out pairs/
 ```
 
 **Train a reward model** on the bundled example pairs, or on the
-[training corpus](https://huggingface.co/datasets/stellalisy/IsoVRBench-corpus):
+[training split](https://huggingface.co/datasets/stellalisy/IsoVRBench) (see [`reward_training/`](reward_training) for downloading it):
 
 ```bash
 python reward_training/train.py --out ckpt/
@@ -144,12 +143,17 @@ python reward_training/train.py --out ckpt/
 
 ## Data
 
-| Dataset | Contents |
-|---|---|
-| [Benchmark](https://huggingface.co/datasets/stellalisy/IsoVRBench) | 8,000 pairs, 1,000 per intervention, over 15,047 clips and 7,129 prompts, plus a separate conflicted subset described in [`IsoVRBench/`](IsoVRBench) |
-| [Training corpus](https://huggingface.co/datasets/stellalisy/IsoVRBench-corpus) | 160,000 training and 4,000 validation pairs, 20,000 and 500 per intervention, over 234,075 clips and 70,075 prompts |
+Everything is in one dataset,
+[stellalisy/IsoVRBench](https://huggingface.co/datasets/stellalisy/IsoVRBench).
 
-Benchmark prompts are disjoint from the training corpus.
+| split | pairs | clips | contents |
+|---|---|---|---|
+| `test` | 8,000 | 15,047 | the benchmark, 1,000 pairs per intervention over 7,129 prompts |
+| `train` | 160,000 | 234,075, shared with validation | 20,000 pairs per intervention |
+| `validation` | 4,000 | | 500 pairs per intervention |
+
+Splits are disjoint on prompt id, and every benchmark prompt is excluded from
+training and validation.
 
 ## Citation
 

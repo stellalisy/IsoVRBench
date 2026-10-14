@@ -1,18 +1,10 @@
 # IsoVRBench
 
-The benchmark is 8,000 pairs built by [IsoGen](../IsoGen). The dataset also ships a second,
-**conflicted** subset of 8,000 pairs for analysis, described below.
-
-The **isolated** subset, the benchmark itself, is 8,000 pairs over eight interventions, 1,000 each.
-One clip was changed in exactly one respect, so the correct answer follows from
-the construction rather than from anyone judging the result.
-
-The **conflicted** subset is 8,000 pairs in two halves. Four oppositions of
-1,000 pairs each set two interventions against one another on the same prompt,
-so each clip is better on one dimension and no answer is correct. Four matched
-controls of 1,000 pairs each apply one of those same interventions alone, to
-the same prompts, and do have a correct answer. What a competing cue costs is
-the difference between the two.
+The benchmark is 8,000 pairs built by [IsoGen](../IsoGen), 1,000 for each of
+eight interventions. One clip was changed in exactly one respect, so the correct
+answer follows from the construction rather than from anyone judging the result.
+They are the `test` split of the dataset, which also carries the training and
+validation pairs.
 
 The data lives at
 [stellalisy/IsoVRBench](https://huggingface.co/datasets/stellalisy/IsoVRBench).
@@ -85,36 +77,18 @@ A model with per-dimension heads is read on the head each pair's `scored_on`
 field names, so a model that scores motion separately is judged on motion. A
 model returning one number is read on that number everywhere.
 
-### The conflicted subset
-
-`--subset conflicted` reports the other 8,000. Its two halves are read
-differently.
-
-The 4,000 **controls** have a correct answer and are scored exactly as above.
-
-The 4,000 **oppositions** have none. What is reported is the **follow rate**:
-of the decided pairs, the fraction where the side the model preferred is the
-side that dimension favours, per the pair's `favours` field. The two dimensions
-in an opposition favour opposite clips, so their follow rates sum to 100.
-
-`vs_control` is the follow rate minus the matched control's accuracy on the
-same prompts. That difference is the cost of the competing cue, and it is the
-number worth reading, since a follow rate on its own confounds the model's
-preference with its accuracy on that dimension.
-
 ## Practical notes
 
-Scores are keyed on `(path, prompt)` rather than on path alone. In the released
-data every path carries exactly one prompt, so path would work, but the key
-carries the prompt because the score depends on it. If you build a scores file
+Scores are keyed on `(path, prompt)` rather than on path alone, because the
+score depends on the prompt. If you build a scores file
 yourself and omit the prompt, every lookup misses and the scorer says so rather
 than reporting nulls.
 
 Scores are cached to `scores.jsonl`, so a rerun after a crash resumes rather
-than rescoring 20,047 clips.
+than rescoring 15,047 clips.
 
 ## Files
 
-`evaluate.py` fetches the dataset, scores every clip, and reports per
+`evaluate.py` fetches the test split only, not the training shards, scores every clip, and reports per
 intervention accuracy. `score.py` does the accounting and is the same file the
 dataset card ships, so numbers from here and from the card agree.

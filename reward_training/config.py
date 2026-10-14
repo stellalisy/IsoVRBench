@@ -18,7 +18,7 @@ REPO = os.path.dirname(HERE)
 # exist: anything else in a config file is a typo and is reported as one.
 SCHEMA = {
     # where the pairs come from
-    "pairs": str, "videos": str, "val_videos": str,
+    "pairs": str, "val_pairs": str, "videos": str, "val_videos": str,
     "split": str, "val_split": str,
     # what to start from
     "model": str,

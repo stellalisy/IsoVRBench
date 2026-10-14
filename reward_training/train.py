@@ -54,12 +54,14 @@ def load_pairs(path, videos_root, split=""):
     IsoGen's own output has no split field, so an empty split takes everything.
     """
     out, missing, wrong_split = [], 0, 0
+    same = {"val": "validation"}  # the corpus wrote "val", the merged dataset "validation"
     for line in open(path):
         r = json.loads(line)
-        if split and r.get("split", split) != split:
+        if split and same.get(r.get("split", split), r.get("split", split)) != same.get(split, split):
             wrong_split += 1
             continue
-        pref = r.get("preferred") or {}
+        # a dimension the intervention does not change is absent or null
+        pref = {k: v for k, v in (r.get("preferred") or {}).items() if v}
         if not pref:
             continue
         a = os.path.join(videos_root, r["video_a"]["path"])
@@ -246,8 +248,8 @@ def main():
     pairs = load_pairs(src, cfg.videos, cfg.split)
     if a.limit:
         pairs = pairs[:a.limit]
-    val = load_pairs(src, cfg.val_videos or cfg.videos, cfg.val_split) \
-        if cfg.val_split else []
+    val = load_pairs(cfg.val_pairs or src, cfg.val_videos or cfg.videos,
+                     cfg.val_split) if cfg.val_split else []
     print("%d training pairs, %d validation" % (len(pairs), len(val)))
 
     model, processor, marks = build(cfg)

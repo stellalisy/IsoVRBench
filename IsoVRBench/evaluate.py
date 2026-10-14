@@ -20,7 +20,7 @@ how a model that scores motion separately gets judged on motion.
 The benchmark is private, so `huggingface-cli login` first.
 
 Scores are cached to scores.jsonl, so a rerun after a crash resumes rather than
-rescoring 20,047 clips.
+rescoring 15,047 clips.
 """
 import argparse
 import importlib
@@ -41,7 +41,9 @@ def fetch(repo, local):
     """Download the benchmark. Skips anything already present."""
     from huggingface_hub import snapshot_download
     print("fetching %s" % repo)
-    return snapshot_download(repo_id=repo, repo_type="dataset", local_dir=local)
+    # only the test split; the training shards under train/ are about 138 GB
+    return snapshot_download(repo_id=repo, repo_type="dataset", local_dir=local,
+                             allow_patterns=["isolated.jsonl", "videos.jsonl", "videos/*"])
 
 
 def main():
@@ -52,8 +54,6 @@ def main():
                     help="where to put or find the benchmark")
     ap.add_argument("--repo", default="stellalisy/IsoVRBench")
     ap.add_argument("--scores", default="scores.jsonl")
-    ap.add_argument("--subset", choices=("isolated", "conflicted", "both"),
-                    default="isolated")
     ap.add_argument("--no-download", action="store_true",
                     help="use --data as is")
     a = ap.parse_args()
@@ -94,26 +94,20 @@ def main():
     probe = json.loads(open(a.scores).readline())
     single = "score" in probe
     res = {"n_scored_clips": sum(1 for _ in open(a.scores))}
-    if a.subset in ("isolated", "both"):
-        res["isolated"] = score.isolated(
-            score.read_jsonl(os.path.join(root, "isolated.jsonl")),
-            score.load_scores(a.scores), not single)
-    if a.subset in ("conflicted", "both"):
-        res["conflicted"] = score.conflicted(
-            score.read_jsonl(os.path.join(root, "conflicted.jsonl")),
-            score.load_scores(a.scores), not single)
+    res["isolated"] = score.isolated(
+        score.read_jsonl(os.path.join(root, "isolated.jsonl")),
+        score.load_scores(a.scores), not single)
     print(json.dumps(res, indent=1))
 
-    if "isolated" in res:
-        by = res["isolated"]["by_intervention"]
-        print("\n%-12s %8s %8s %7s" % ("", "ties=wrong", "decided", "ties"))
-        for k in ("mq_hold", "shuffle", "mq_gen", "ta_attrib", "vq_steps",
-                  "size_i2v", "size_5b", "size_1p3b"):
-            v = by.get(k)
-            if v:
-                print("%-12s %8s %8s %7d" % (k, v["ties_wrong"], v["decided"],
-                                             v["ties"]))
-        print("%-12s %8s" % ("average", res["isolated"]["average_ties_wrong"]))
+    by = res["isolated"]["by_intervention"]
+    print("\n%-12s %8s %8s %7s" % ("", "ties=wrong", "decided", "ties"))
+    for k in ("mq_hold", "shuffle", "mq_gen", "ta_attrib", "vq_steps",
+              "size_i2v", "size_5b", "size_1p3b"):
+        v = by.get(k)
+        if v:
+            print("%-12s %8s %8s %7d" % (k, v["ties_wrong"], v["decided"],
+                                         v["ties"]))
+    print("%-12s %8s" % ("average", res["isolated"]["average_ties_wrong"]))
 
 
 if __name__ == "__main__":
