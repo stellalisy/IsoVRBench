@@ -6,3 +6,7 @@
 # A milder visual degradation than the benchmark setting of 8. The two are
 # about 13 points of model accuracy apart on the same items.
 vq_steps: 16
+
+# Three attributes edited per pair. The pilot put one edit at 44% agreement
+# and three at 100%.
+ta_attrib_k: 3

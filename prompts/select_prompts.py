@@ -37,7 +37,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "IsoGen"))
-import interventions as IV                                            # noqa: E402
+import attribute_edit as AE                                           # noqa: E402
 
 
 def excluded_prompts(paths):
@@ -65,6 +65,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pool", required=True, help="pool_v2.0.jsonl from prompt_pipeline.py")
     ap.add_argument("--triggers", default=os.path.join(HERE, "..", "IsoGen", "triggers.json"))
+    ap.add_argument("--trigger-classes",
+                    default=os.path.join(HERE, "..", "IsoGen", "trigger_classes.json"))
     ap.add_argument("--exclude", nargs="*", default=[],
                     help="files whose prompts must not be selected")
     ap.add_argument("--n", type=int, default=75000)
@@ -74,7 +76,7 @@ def main():
     ap.add_argument("--out", default="prompts.jsonl")
     a = ap.parse_args()
     rng = random.Random(a.seed)
-    triggers = json.load(open(a.triggers))["entries"]
+    triggers = AE.TriggerList(a.triggers, a.trigger_classes)
 
     bad = excluded_prompts(a.exclude)
     print(f"exclusions: {len(bad)} distinct prompts from {len(a.exclude)} files")
@@ -100,17 +102,17 @@ def main():
                 skipped["duplicate"] += 1
                 continue
             seen.add(pr)
-            hits = [e for e in triggers
-                    if e.get("targets") and IV.trigger_match(pr, e["trigger"])]
-            if not hits:
+            sw = triggers.swaps_for(pr)
+            if not sw:
                 skipped["no trigger"] += 1
                 continue
-            # k_max is what ta_attrib can actually apply together, one trigger
-            # per dimension, which is fewer than the raw hit count
-            k_max = len(IV.find_triggers(pr, triggers, 3))
+            # k_max is what can ACTUALLY be applied together, via the same chooser
+            # ta_attrib uses. n_swaps alone is availability, and the one-per-dimension
+            # and span-overlap filters cut the usable count.
+            k_max = len(triggers.choose_swaps(sw, 3, random.Random(pr)))
             cands.append({"prompt": pr,
-                          "dims": sorted({e["dimension"] for e in hits}),
-                          "n_swaps": len(hits), "k_max": k_max})
+                          "dims": sorted({s["dimension"] for s in sw}),
+                          "n_swaps": len(sw), "k_max": k_max})
     print(f"screened {a.scan} lines -> {len(cands)} usable candidates")
     for k, v in skipped.most_common():
         print(f"    skipped {k}: {v}")

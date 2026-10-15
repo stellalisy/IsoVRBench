@@ -30,6 +30,7 @@ sys.path.insert(0, HERE)
 
 import yaml
 
+import attribute_edit as AE
 import config as C
 import interventions as IV
 
@@ -233,6 +234,7 @@ def main():
     ap.add_argument("--set", action="append", default=[], metavar="KEY=VALUE",
                     help="override a config field, e.g. --set vq_steps=4")
     ap.add_argument("--triggers", default=os.path.join(HERE, "triggers.json"))
+    ap.add_argument("--trigger-classes", default=os.path.join(HERE, "trigger_classes.json"))
     ap.add_argument("--models-root",
                     help="directory holding the generators; "
                          "otherwise they come from the hub")
@@ -258,11 +260,11 @@ def main():
     if bad:
         sys.exit("unknown families: %s" % ", ".join(bad))
 
-    triggers = []
+    triggers = None
     if "ta_attrib" in families:
         if not os.path.exists(a.triggers):
             sys.exit("ta_attrib needs %s" % a.triggers)
-        triggers = json.load(open(a.triggers))["entries"]
+        triggers = AE.TriggerList(a.triggers, a.trigger_classes)
 
     rows = load_rows(a)[a.shard::a.num_shards]
     print("%d items, families: %s" % (len(rows), ", ".join(families)))

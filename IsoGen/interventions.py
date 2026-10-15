@@ -4,9 +4,7 @@
 Each takes the anchor, or the prompt that produced it, plus a config, and
 returns the frames of the degraded clip. Nothing here writes files.
 """
-import functools
 import random
-import re
 
 import numpy as np
 
@@ -75,61 +73,22 @@ def ta_attrib(t2v, prompt, triggers, cfg):
     """Edit attributes in the prompt, render that, and pair it against the
     anchor under the original prompt.
 
-    The edit is a lookup in the frozen trigger list, so it is deterministic.
-    Returns frames, the edited prompt, and what was changed.
+    `triggers` is an attribute_edit.TriggerList. The edit is a lookup in the
+    frozen trigger list, seeded by the prompt, so it is deterministic. A prompt
+    that cannot take ta_attrib_k disjoint swaps is skipped. Returns frames, the
+    edited prompt, and what was changed.
     """
-    edits = find_triggers(prompt, triggers, cfg.ta_attrib_k)
-    if not edits:
+    edited, swaps = triggers.edit(prompt, cfg.ta_attrib_k, cfg.seed)
+    if len(swaps) < cfg.ta_attrib_k:
         return None, None, None
-    edited = prompt
-    for trigger, target, _ in edits:
-        edited = replace_once(edited, trigger, target)
     frames = t2v(prompt=edited, height=cfg.height, width=cfg.width,
                  num_frames=cfg.num_frames, num_inference_steps=cfg.steps,
                  guidance_scale=cfg.guidance, generator=seeded_generator(cfg)).frames[0]
-    meta = {"k": len(edits),
-            "trigger": [t for t, _, _ in edits],
-            "target": [g for _, g, _ in edits],
-            "swap_dimension": [d for _, _, d in edits]}
+    meta = {"k": len(swaps),
+            "trigger": [s["trigger"] for s in swaps],
+            "target": [s["target"] for s in swaps],
+            "swap_dimension": [s["dimension"] for s in swaps]}
     return frames, edited, meta
-
-
-@functools.lru_cache(maxsize=None)
-def _trigger_pattern(trigger):
-    return re.compile(r"(?<![a-z0-9])" + re.escape(trigger.lower()) + r"(?![a-z0-9])")
-
-
-def trigger_match(prompt, trigger):
-    """The first whole-word occurrence of trigger in prompt, ignoring case,
-    so "king" does not fire inside "attacking"."""
-    return _trigger_pattern(trigger).search(prompt.lower())
-
-
-def find_triggers(prompt, triggers, k):
-    """Up to k trigger phrases present in the prompt as whole words, longest
-    first so "12 year" wins over "year". Each dimension is used at most once,
-    a trigger overlapping one already chosen is skipped, so "monster" cannot
-    be edited as two dimensions, and entries carrying a review_flag, mostly a
-    wrong dimension label, are skipped."""
-    found, used, spans = [], set(), []
-    for e in sorted(triggers, key=lambda e: -len(e["trigger"])):
-        if len(found) >= k:
-            break
-        d = e.get("dimension")
-        if d in used or not e.get("targets") or e.get("review_flag"):
-            continue
-        m = trigger_match(prompt, e["trigger"])
-        if m is None or any(m.start() < b and a < m.end() for a, b in spans):
-            continue
-        found.append((e["trigger"], e["targets"][0], d))
-        used.add(d)
-        spans.append(m.span())
-    return found
-
-
-def replace_once(prompt, trigger, target):
-    m = trigger_match(prompt, trigger)
-    return prompt if m is None else prompt[:m.start()] + target + prompt[m.end():]
 
 
 # --- another text to video model, same prompt ------------------------------

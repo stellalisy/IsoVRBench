@@ -1,0 +1,3161 @@
+{
+ "25 year old": {
+  "added_correct_spelling": [],
+  "banned": [
+   "20-something",
+   "24-year-old",
+   "30 year old",
+   "30-year-old",
+   "in her twenties",
+   "in his twenties",
+   "twenty-something",
+   "young",
+   "young adult"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "25 year old",
+   "25-year-old"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "25 year old",
+   "25-year-old"
+  ],
+  "targets": [
+   "5-year-old",
+   "6 year old",
+   "a baby in a pram",
+   "an 80 year old",
+   "an 80-year-old",
+   "an elderly person with white hair"
+  ]
+ },
+ "3d cartoon": {
+  "added_correct_spelling": [],
+  "banned": [
+   "2d cartoon",
+   "3d animated",
+   "3d render",
+   "animated",
+   "animation",
+   "cgi",
+   "cgi cartoon",
+   "claymation"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "3d cartoon",
+   "3d cartoons"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "3d cartoon",
+   "3d cartoons"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "live action footage",
+   "oil painting"
+  ]
+ },
+ "_source_list": "trigger_list_v2.json",
+ "_suggested_spelling_additions": {
+  "candidates": [
+   [
+    "businesswoman",
+    "businessman"
+   ],
+   [
+    "macaco",
+    "macro"
+   ],
+   [
+    "musium",
+    "music"
+   ],
+   [
+    "witch",
+    "with"
+   ]
+  ],
+  "note": "trigger -> a more frequent close spelling that is NOT itself in the list. NOT merged. Spelling similarity cannot tell a typo from a different word (businesswoman/businessman, witch/with), so each needs a human yes/no first."
+ },
+ "alien": {
+  "added_correct_spelling": [],
+  "banned": [
+   "beings",
+   "creature",
+   "creatures",
+   "e.t.s",
+   "et",
+   "extraterrestrial",
+   "extraterrestrials",
+   "grey",
+   "grey alien",
+   "humanoid",
+   "humanoid alien",
+   "martian",
+   "martians",
+   "monsters"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "alien",
+   "aliens"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "alien",
+   "aliens"
+  ],
+  "targets": [
+   "armoured astronaut",
+   "giant spider",
+   "glowing angel",
+   "gorilla",
+   "horned demon",
+   "humanoid androids",
+   "humanoid robot",
+   "knight in armour",
+   "knights in armour",
+   "masked soldiers",
+   "octopus",
+   "robots",
+   "translucent ghost"
+  ]
+ },
+ "angel": {
+  "added_correct_spelling": [],
+  "banned": [
+   "archangel",
+   "cherub",
+   "cherubs",
+   "fairy",
+   "goddess",
+   "seraph",
+   "seraphim",
+   "spirits",
+   "winged beings",
+   "winged figure",
+   "winged spirit",
+   "winged woman"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "angel",
+   "angels"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "angel",
+   "angels"
+  ],
+  "targets": [
+   "blazing meteor",
+   "cyborg",
+   "demon",
+   "horned demons",
+   "robots",
+   "translucent ghosts"
+  ]
+ },
+ "animestyle": {
+  "added_correct_spelling": [],
+  "banned": [
+   "2d animated",
+   "2d animation",
+   "anime",
+   "cartoon",
+   "cel-shaded",
+   "manga style"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "anime style",
+   "animestyle"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "anime style",
+   "animestyle"
+  ],
+  "targets": [
+   "3d render",
+   "claymation",
+   "live action footage",
+   "oil painting"
+  ]
+ },
+ "batman": {
+  "added_correct_spelling": [],
+  "banned": [
+   "batman",
+   "bruce wayne",
+   "caped crusader",
+   "caped vigilante",
+   "dark knight"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "bat man",
+   "batman"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "bat man",
+   "batman"
+  ],
+  "targets": [
+   "a stormtrooper in white armour",
+   "clown costume",
+   "medieval knight in plate armour",
+   "orange spacesuit",
+   "pikachu",
+   "santa claus",
+   "spider man",
+   "spider-man"
+  ]
+ },
+ "birdseye view": {
+  "added_correct_spelling": [],
+  "banned": [
+   "aerial shot",
+   "aerial view",
+   "angle from above",
+   "drone shot",
+   "drone view",
+   "flyover",
+   "top down",
+   "top-down view"
+  ],
+  "classes": [
+   "convention",
+   "misspelling"
+  ],
+  "members": [
+   "bird's eye view",
+   "bird's eye wiew",
+   "birdseye view"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "bird's eye view",
+   "bird's eye wiew",
+   "birdseye view"
+  ],
+  "targets": [
+   "close up",
+   "close-up",
+   "wide shot"
+  ]
+ },
+ "black & white": {
+  "added_correct_spelling": [],
+  "banned": [
+   "b&w",
+   "black & white",
+   "desaturated",
+   "greyscale",
+   "monochrome",
+   "sepia",
+   "washed-out grey"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "black & white",
+   "black and white"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "black & white",
+   "black and white"
+  ],
+  "targets": [
+   "bright technicolor",
+   "full colour",
+   "neon rainbow colours",
+   "neon technicolor",
+   "vivid colour"
+  ]
+ },
+ "blonde": {
+  "added_correct_spelling": [],
+  "banned": [
+   "blond",
+   "blonde",
+   "fair",
+   "fair-haired",
+   "golden",
+   "golden-haired",
+   "light brown",
+   "platinum"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "blond",
+   "blonde"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "blond",
+   "blonde"
+  ],
+  "targets": [
+   "bright green",
+   "bright pink",
+   "fiery red",
+   "jet black"
+  ]
+ },
+ "bright colors": {
+  "added_correct_spelling": [],
+  "banned": [
+   "colorful",
+   "colourful",
+   "neon technicolor",
+   "saturated",
+   "saturated colours",
+   "vibrant",
+   "vibrant colors",
+   "vivid colors",
+   "vivid colours"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "bright colors",
+   "bright colours"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "bright colors",
+   "bright colours"
+  ],
+  "targets": [
+   "black and white",
+   "desaturated grey",
+   "sepia",
+   "warm sepia",
+   "washed-out desaturated grey"
+  ]
+ },
+ "cartoon": {
+  "added_correct_spelling": [],
+  "banned": [
+   "2d",
+   "2d animation",
+   "2d cartoon",
+   "2d drawing",
+   "animated",
+   "animated character",
+   "animation",
+   "anime",
+   "anime character",
+   "cartoon",
+   "illustration",
+   "stylized",
+   "toon",
+   "toons"
+  ],
+  "classes": [
+   "inflection",
+   "misspelling"
+  ],
+  "members": [
+   "caetoon",
+   "cartoon",
+   "cartoons"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "caetoon",
+   "cartoon",
+   "cartoons"
+  ],
+  "targets": [
+   "3d render",
+   "claymation",
+   "live action footage",
+   "oil painting"
+  ]
+ },
+ "cartoon style": {
+  "added_correct_spelling": [],
+  "banned": [
+   "2d animation",
+   "2d cartoon",
+   "animated",
+   "animation",
+   "anime",
+   "anime style",
+   "cartoonish",
+   "comic-style",
+   "illustrated",
+   "toon"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "cartoon style",
+   "cartoon-style"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "cartoon style",
+   "cartoon-style"
+  ],
+  "targets": [
+   "3d render",
+   "claymation",
+   "live action footage",
+   "oil painting"
+  ]
+ },
+ "cat": {
+  "added_correct_spelling": [],
+  "banned": [
+   "feline",
+   "felines",
+   "house cat",
+   "house cats",
+   "housecat",
+   "kitten",
+   "kittens",
+   "kitty",
+   "lynx",
+   "puppies",
+   "tabby",
+   "tiger",
+   "tiger cub",
+   "tomcat"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "cat",
+   "cats"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "cat",
+   "cats"
+  ],
+  "targets": [
+   "dog",
+   "dogs",
+   "fox",
+   "foxes",
+   "porcupine",
+   "rabbit",
+   "rabbits",
+   "raccoon"
+  ]
+ },
+ "children": {
+  "added_correct_spelling": [],
+  "banned": [
+   "boys and girls",
+   "kids",
+   "little ones",
+   "students",
+   "young children",
+   "youngsters"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "childreen",
+   "children"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "childreen",
+   "children"
+  ],
+  "targets": [
+   "a stooped very old man",
+   "adults",
+   "adults in business suits",
+   "babies",
+   "elderly people",
+   "grown adults in business suits",
+   "toddlers"
+  ]
+ },
+ "chocolate": {
+  "added_correct_spelling": [
+   "chocolate"
+  ],
+  "banned": [
+   "cocoa",
+   "fudge",
+   "ganache"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "choccolate",
+   "chocolate"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "choccolate"
+  ],
+  "targets": [
+   "honey",
+   "large pizza",
+   "milk"
+  ]
+ },
+ "closeup": {
+  "added_correct_spelling": [],
+  "banned": [
+   "angle from above",
+   "close-up",
+   "closeup",
+   "headshot",
+   "macro",
+   "macro shot",
+   "medium shot",
+   "portrait",
+   "tight framing",
+   "tight shot"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "close up",
+   "close-up",
+   "closeup"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "close up",
+   "close-up",
+   "closeup"
+  ],
+  "targets": [
+   "aerial shot",
+   "wide shot"
+  ]
+ },
+ "colorful": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bright",
+   "colorful",
+   "colourful",
+   "multicolored",
+   "multicoloured",
+   "neon technicolor",
+   "polychrome",
+   "rainbow",
+   "saturated",
+   "vibrant",
+   "vivid",
+   "vivid colors"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "colorful",
+   "colorfull",
+   "colorifull",
+   "colourful",
+   "colourfull"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "colorful",
+   "colorfull",
+   "colorifull",
+   "colourful",
+   "colourfull"
+  ],
+  "targets": [
+   "black and white",
+   "sepia",
+   "sepia monochrome",
+   "sepia toned",
+   "single-hue blue duotone",
+   "warm sepia",
+   "washed-out desaturated"
+  ]
+ },
+ "cube": {
+  "added_correct_spelling": [],
+  "banned": [
+   "block",
+   "blocks",
+   "box",
+   "boxes",
+   "cube",
+   "cube-shaped",
+   "cuboid",
+   "cuboids",
+   "hexahedron",
+   "square blocks"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "cube",
+   "cubes"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "cube",
+   "cubes"
+  ],
+  "targets": [
+   "a flat disc",
+   "a smooth sphere",
+   "flat discs",
+   "pyramid",
+   "pyramids",
+   "spheres"
+  ]
+ },
+ "daytime": {
+  "added_correct_spelling": [],
+  "banned": [
+   "afternoon",
+   "bright morning daylight",
+   "day",
+   "daylight",
+   "daytime",
+   "dusk",
+   "midday",
+   "morning"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "day time",
+   "daytime"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "day time",
+   "daytime"
+  ],
+  "targets": [
+   "dawn twilight",
+   "deep dusk",
+   "golden sunset light",
+   "midnight",
+   "pitch-dark midnight"
+  ]
+ },
+ "desert": {
+  "added_correct_spelling": [],
+  "banned": [
+   "arid plain",
+   "arid wasteland",
+   "badlands",
+   "desert",
+   "dry plain",
+   "dunes",
+   "sahara",
+   "sand",
+   "sand dunes",
+   "sand flats",
+   "sands",
+   "sandy plain",
+   "steppe",
+   "wasteland",
+   "wilderness"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "desert",
+   "desrt",
+   "dessert"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "desert",
+   "desrt",
+   "dessert"
+  ],
+  "targets": [
+   "busy city street",
+   "dense jungle",
+   "flooded swamp",
+   "ocean",
+   "open ocean",
+   "snowy tundra",
+   "swamp"
+  ]
+ },
+ "destroyed": {
+  "added_correct_spelling": [
+   "destroyed"
+  ],
+  "banned": [
+   "crumbling",
+   "demolished",
+   "destroyed",
+   "ruined",
+   "wrecked"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "destoryed",
+   "destroyed"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "destoryed"
+  ],
+  "targets": [
+   "brand-new",
+   "freshly painted",
+   "rusty"
+  ]
+ },
+ "dinosaur": {
+  "added_correct_spelling": [],
+  "banned": [
+   "brontosaurus",
+   "dinos",
+   "dinosaur",
+   "giant lizard",
+   "lizards",
+   "prehistoric reptile",
+   "prehistoric reptiles",
+   "raptor",
+   "raptors",
+   "reptile",
+   "reptiles",
+   "t-rex",
+   "t-rexes"
+  ],
+  "classes": [
+   "inflection",
+   "misspelling"
+  ],
+  "members": [
+   "dinosaur",
+   "dinosaurs",
+   "dinosaurus"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "dinosaur",
+   "dinosaurs",
+   "dinosaurus"
+  ],
+  "targets": [
+   "dragon",
+   "dragons",
+   "elephant",
+   "elephants",
+   "giraffe",
+   "giraffes",
+   "mammoth"
+  ]
+ },
+ "dog": {
+  "added_correct_spelling": [],
+  "banned": [
+   "canine",
+   "canines",
+   "german shepherd",
+   "hound",
+   "hounds",
+   "husky",
+   "labrador",
+   "pup",
+   "puppies",
+   "puppy",
+   "strays",
+   "terrier",
+   "wolf",
+   "wolves"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "dog",
+   "dogs"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "dog",
+   "dogs"
+  ],
+  "targets": [
+   "cat",
+   "cats",
+   "fox",
+   "foxes",
+   "goat",
+   "pig",
+   "sheep"
+  ]
+ },
+ "doll": {
+  "added_correct_spelling": [],
+  "banned": [
+   "dolly",
+   "figurine",
+   "figurines",
+   "mannequin",
+   "mannequins",
+   "puppet",
+   "puppets",
+   "toy doll"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "doll",
+   "dolls"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "doll",
+   "dolls"
+  ],
+  "targets": [
+   "garden gnome",
+   "garden gnomes",
+   "skeletons",
+   "taxidermied crow",
+   "teddy bears",
+   "wooden nutcracker"
+  ]
+ },
+ "dragon": {
+  "added_correct_spelling": [],
+  "banned": [
+   "beast",
+   "chinese dragon",
+   "drake",
+   "drakes",
+   "giant serpent",
+   "lizard beast",
+   "lizards",
+   "sea dragon",
+   "serpent",
+   "serpents",
+   "winged beast",
+   "winged serpent",
+   "winged serpents",
+   "wyrm",
+   "wyvern",
+   "wyverns"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "dragon",
+   "dragons"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "dragon",
+   "dragons"
+  ],
+  "targets": [
+   "animated skeleton",
+   "armoured cyborg",
+   "fighter jet",
+   "giant eagle",
+   "giant eagles",
+   "giant gorilla",
+   "giant paper aeroplane",
+   "griffins",
+   "hot air balloon",
+   "industrial robot",
+   "pterodactyl",
+   "pterodactyls",
+   "stone golem"
+  ]
+ },
+ "duck": {
+  "added_correct_spelling": [],
+  "banned": [
+   "birds",
+   "drake",
+   "duckling",
+   "ducklings",
+   "geese",
+   "goose",
+   "waterfowl"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "duck",
+   "ducks"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "duck",
+   "ducks"
+  ],
+  "targets": [
+   "chicken",
+   "chickens",
+   "flamingo",
+   "pelican",
+   "pelicans",
+   "swan",
+   "swans",
+   "turtle",
+   "turtles"
+  ]
+ },
+ "egg": {
+  "added_correct_spelling": [],
+  "banned": [
+   "fried egg",
+   "omelette",
+   "orb",
+   "ovoid stone",
+   "scrambled eggs",
+   "smooth stone pebble",
+   "sphere"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "egg",
+   "eggs"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "egg",
+   "eggs"
+  ],
+  "targets": [
+   "bowls of noodles",
+   "folded paper crane",
+   "light bulb",
+   "pancakes",
+   "pine cone",
+   "small clay pot",
+   "whole fish"
+  ]
+ },
+ "extreme closeup": {
+  "added_correct_spelling": [],
+  "banned": [
+   "closeup",
+   "extreme close up",
+   "macro shot",
+   "medium shot",
+   "portrait",
+   "tight close up"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "extreme close up",
+   "extreme closeup"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "extreme close up",
+   "extreme closeup"
+  ],
+  "targets": [
+   "aerial shot",
+   "wide shot"
+  ]
+ },
+ "face": {
+  "added_correct_spelling": [],
+  "banned": [
+   "features",
+   "head",
+   "heads",
+   "portrait",
+   "portraits",
+   "visage",
+   "visages"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "face",
+   "faces"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "face",
+   "faces"
+  ],
+  "targets": [
+   "feet",
+   "hands",
+   "mouth",
+   "skull"
+  ]
+ },
+ "farmer": {
+  "added_correct_spelling": [],
+  "banned": [
+   "agricultural worker",
+   "farm hand",
+   "farm worker",
+   "farmhands in dungarees",
+   "field hand",
+   "field workers",
+   "labourer",
+   "peasant",
+   "peasants",
+   "rancher",
+   "villager",
+   "villagers"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "farmer",
+   "farmers"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "farmer",
+   "farmers"
+  ],
+  "targets": [
+   "astronauts in spacesuits",
+   "ballerina in a white tutu",
+   "clowns in full makeup",
+   "deep-sea diver in a brass helmet",
+   "judges in wigs and robes",
+   "knight in plate armour",
+   "sumo wrestlers"
+  ]
+ },
+ "fish": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bass",
+   "carp",
+   "fish",
+   "guppies",
+   "salmon",
+   "shark",
+   "tropical fish",
+   "trout",
+   "whale"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "fish",
+   "fishes"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "fish",
+   "fishes"
+  ],
+  "targets": [
+   "crab",
+   "crabs",
+   "jellyfish",
+   "octopus",
+   "sea turtle",
+   "sea turtles"
+  ]
+ },
+ "flowers": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bloom",
+   "blooms",
+   "blossom",
+   "blossoms",
+   "plant",
+   "roses",
+   "tulips"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "flower",
+   "flowers"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "flower",
+   "flowers"
+  ],
+  "targets": [
+   "car tyres",
+   "fern",
+   "glowing mushrooms",
+   "mushroom",
+   "pine cones",
+   "small cactus"
+  ]
+ },
+ "forest": {
+  "added_correct_spelling": [],
+  "banned": [
+   "grove",
+   "jungle",
+   "park",
+   "rainforest",
+   "trees",
+   "wood",
+   "woodland",
+   "woods"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "forest",
+   "forests"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "forest",
+   "forests"
+  ],
+  "targets": [
+   "busy city street",
+   "desert",
+   "frozen tundra",
+   "ocean",
+   "open desert",
+   "open grassland",
+   "snowy tundra",
+   "volcanic wasteland"
+  ]
+ },
+ "freddy kruger": {
+  "added_correct_spelling": [],
+  "banned": [
+   "horror villain",
+   "jason voorhees",
+   "leatherface",
+   "michael myers",
+   "nightmare on elm street killer",
+   "scarred man in a fedora"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "freddy krueger",
+   "freddy kruger"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "freddy krueger",
+   "freddy kruger"
+  ],
+  "targets": [
+   "a mummy wrapped in bandages",
+   "batman",
+   "darth vader",
+   "roman legionary in armour",
+   "santa claus"
+  ]
+ },
+ "girl": {
+  "added_correct_spelling": [],
+  "banned": [
+   "child",
+   "child's",
+   "daughter",
+   "female",
+   "female child",
+   "kid",
+   "kid's",
+   "lady",
+   "lady's",
+   "maiden",
+   "teenager",
+   "woman",
+   "young girl",
+   "young lady",
+   "young woman",
+   "young woman's"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "girl",
+   "girl's"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "girl",
+   "girl's"
+  ],
+  "targets": [
+   "a grown man",
+   "a middle-aged woman",
+   "a small child",
+   "a small child's",
+   "an elderly woman's",
+   "boy",
+   "elderly man",
+   "elderly man's",
+   "elderly woman",
+   "grown man",
+   "old man",
+   "toddler"
+  ]
+ },
+ "grandmother": {
+  "added_correct_spelling": [],
+  "banned": [
+   "elderly woman",
+   "elderly women",
+   "grandma",
+   "grannies",
+   "granny",
+   "old ladies",
+   "old lady"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "grandmother",
+   "grandmothers"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "grandmother",
+   "grandmothers"
+  ],
+  "targets": [
+   "a young woman in her twenties",
+   "grown adults in business suits",
+   "little boy",
+   "teenage girls",
+   "toddler",
+   "toddlers"
+  ]
+ },
+ "guitar": {
+  "added_correct_spelling": [],
+  "banned": [
+   "acoustic guitar",
+   "acoustic guitars",
+   "banjo",
+   "bass",
+   "bass guitar",
+   "basses",
+   "electric guitar",
+   "electric guitars",
+   "lute",
+   "ukulele",
+   "ukuleles"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "guitar",
+   "guitars"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "guitar",
+   "guitars"
+  ],
+  "targets": [
+   "drum kit",
+   "drum kits",
+   "grand piano",
+   "harp",
+   "harps",
+   "trumpet",
+   "trumpets",
+   "tuba"
+  ]
+ },
+ "horse": {
+  "added_correct_spelling": [],
+  "banned": [
+   "foal",
+   "mare",
+   "mares",
+   "pegasus",
+   "ponies",
+   "pony",
+   "stallion",
+   "stallions",
+   "steed",
+   "steeds",
+   "unicorn"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "horse",
+   "horses"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "horse",
+   "horses"
+  ],
+  "targets": [
+   "camel",
+   "camels",
+   "cow",
+   "cows",
+   "donkey",
+   "donkeys",
+   "giraffe",
+   "zebra",
+   "zebras"
+  ]
+ },
+ "hyperrealistic": {
+  "added_correct_spelling": [],
+  "banned": [
+   "8k detailed",
+   "hyper realistic",
+   "hyperreal",
+   "hyperrealistic",
+   "lifelike",
+   "live action",
+   "photo real",
+   "photorealistic",
+   "realistic",
+   "ultra realistic"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "hyper realistic",
+   "hyperrealistic"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "hyper realistic",
+   "hyperrealistic"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d render",
+   "claymation",
+   "oil painting"
+  ]
+ },
+ "illustration": {
+  "added_correct_spelling": [],
+  "banned": [
+   "2d art",
+   "artwork",
+   "cartoon",
+   "cartoon image",
+   "dibujo",
+   "drawing",
+   "drawings",
+   "illustration",
+   "picture",
+   "sketch"
+  ],
+  "classes": [
+   "inflection",
+   "misspelling"
+  ],
+  "members": [
+   "illustration",
+   "illustrations",
+   "ilustracion"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "illustration",
+   "illustrations",
+   "ilustracion"
+  ],
+  "targets": [
+   "3d render",
+   "claymation",
+   "live action footage",
+   "oil painting"
+  ]
+ },
+ "ironman": {
+  "added_correct_spelling": [],
+  "banned": [
+   "iron patriot",
+   "man in a red robot suit",
+   "superhero",
+   "tony stark",
+   "war machine"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "iron man",
+   "ironman"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "iron man",
+   "ironman"
+  ],
+  "targets": [
+   "batman",
+   "darth vader",
+   "godzilla",
+   "optimus prime",
+   "spongebob",
+   "superman"
+  ]
+ },
+ "jewels": {
+  "added_correct_spelling": [],
+  "banned": [
+   "crystal",
+   "diamond",
+   "diamonds",
+   "gem",
+   "gems",
+   "gemstone",
+   "gemstones",
+   "glass marble",
+   "glass marbles",
+   "precious stones"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "jewel",
+   "jewels"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "jewel",
+   "jewels"
+  ],
+  "targets": [
+   "brass key",
+   "brass keys",
+   "gold coin",
+   "gold coins",
+   "polished pebble",
+   "polished pebbles",
+   "walnut",
+   "walnuts"
+  ]
+ },
+ "jungle": {
+  "added_correct_spelling": [],
+  "banned": [
+   "amazon",
+   "bush",
+   "dense foliage",
+   "dense forest",
+   "forest",
+   "jungle",
+   "rainforest",
+   "tropical forest",
+   "undergrowth",
+   "woods"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "junbgle",
+   "jungle"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "junbgle",
+   "jungle"
+  ],
+  "targets": [
+   "city street",
+   "desert",
+   "desert canyon",
+   "icy glacier",
+   "snowy tundra"
+  ]
+ },
+ "kids": {
+  "added_correct_spelling": [],
+  "banned": [
+   "boy",
+   "boys",
+   "child",
+   "children",
+   "little ones",
+   "teenager",
+   "teenagers",
+   "teens",
+   "young boy",
+   "young kids",
+   "youngster",
+   "youngsters",
+   "youth"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "kid",
+   "kids"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "kid",
+   "kids"
+  ],
+  "targets": [
+   "adult men in business suits",
+   "babies",
+   "elderly man",
+   "elderly people",
+   "grandmother",
+   "newborn baby"
+  ]
+ },
+ "kitten": {
+  "added_correct_spelling": [],
+  "banned": [
+   "baby cat",
+   "cat",
+   "cats",
+   "cubs",
+   "feline",
+   "felines",
+   "kitty",
+   "puppy",
+   "young cat",
+   "young cats"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "kitten",
+   "kittens"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "kitten",
+   "kittens"
+  ],
+  "targets": [
+   "duckling",
+   "piglet",
+   "piglets",
+   "puppies",
+   "rabbit",
+   "rabbits"
+  ]
+ },
+ "mermaid": {
+  "added_correct_spelling": [],
+  "banned": [
+   "merfolk",
+   "sea nymph",
+   "siren",
+   "sirens",
+   "water nymphs"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "mermaid",
+   "mermaids"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "mermaid",
+   "mermaids"
+  ],
+  "targets": [
+   "animated skeleton",
+   "divers",
+   "dolphins",
+   "industrial robot",
+   "octopuses",
+   "scuba diver",
+   "sea turtles"
+  ]
+ },
+ "missile": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bazooka",
+   "bombs",
+   "projectiles",
+   "rocket",
+   "rocket launcher",
+   "rockets",
+   "warheads"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "missile",
+   "missiles"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "missile",
+   "missiles"
+  ],
+  "targets": [
+   "double bass",
+   "fireworks",
+   "paper aeroplanes",
+   "roses",
+   "surfboard",
+   "water balloons",
+   "wind turbine blade"
+  ]
+ },
+ "monster": {
+  "added_correct_spelling": [],
+  "banned": [
+   "aliens",
+   "beast",
+   "beasts",
+   "creature",
+   "creatures",
+   "cute alien",
+   "demon",
+   "demons",
+   "ghoul",
+   "ogre",
+   "sea monster"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "monster",
+   "monsters"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "monster",
+   "monsters"
+  ],
+  "targets": [
+   "armoured cyborg",
+   "clown",
+   "giant crab",
+   "giant spider",
+   "giant spiders",
+   "goblins",
+   "robot",
+   "troll",
+   "trolls"
+  ]
+ },
+ "motobike": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bike",
+   "moped",
+   "motorbike",
+   "motorcycle",
+   "scooter"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "motobike",
+   "motor bike"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "motobike",
+   "motor bike"
+  ],
+  "targets": [
+   "bulldozer",
+   "horse-drawn carriage",
+   "hot air balloon",
+   "submarine",
+   "tractor"
+  ]
+ },
+ "motorcycle": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bike",
+   "chopper",
+   "moped",
+   "motorbike",
+   "scooter"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "motorcycle",
+   "motorcyle"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "motorcycle",
+   "motorcyle"
+  ],
+  "targets": [
+   "bicycle",
+   "cable car",
+   "horse-drawn carriage",
+   "jet ski",
+   "monster truck",
+   "tractor"
+  ]
+ },
+ "mountain": {
+  "added_correct_spelling": [],
+  "banned": [
+   "alpine",
+   "alps",
+   "cliff",
+   "cliffs",
+   "crag",
+   "highland",
+   "hill",
+   "hills",
+   "mount",
+   "mountain range",
+   "mountains",
+   "mountaintop",
+   "peak",
+   "peaks",
+   "ridge",
+   "summit"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "mountain",
+   "mountains"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "mountain",
+   "mountains"
+  ],
+  "targets": [
+   "city street",
+   "desert canyon",
+   "desert of sand dunes",
+   "flat salt desert",
+   "flat salt flats",
+   "open ocean",
+   "rolling grassland",
+   "sand dunes",
+   "sandy beach",
+   "skyscrapers",
+   "waterfall"
+  ]
+ },
+ "museum": {
+  "added_correct_spelling": [
+   "museum"
+  ],
+  "banned": [
+   "exhibition hall",
+   "gallery",
+   "museum"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "museum",
+   "musium"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "musium"
+  ],
+  "targets": [
+   "laundromat",
+   "prison cell block",
+   "subway station"
+  ]
+ },
+ "mushroom": {
+  "added_correct_spelling": [],
+  "banned": [
+   "fungi",
+   "fungus",
+   "mushroom",
+   "mushrooms",
+   "shrooms",
+   "toadstool",
+   "toadstools"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "mushroom",
+   "mushrooms"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "mushroom",
+   "mushrooms"
+  ],
+  "targets": [
+   "cacti",
+   "ferns",
+   "pine cone",
+   "small cactus",
+   "smooth stone",
+   "sunflowers",
+   "tall grass"
+  ]
+ },
+ "nighttime": {
+  "added_correct_spelling": [],
+  "banned": [
+   "after dark",
+   "dusk",
+   "evening",
+   "midnight"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "night time",
+   "nighttime"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "night time",
+   "nighttime"
+  ],
+  "targets": [
+   "bright morning daylight",
+   "bright noon",
+   "daytime",
+   "deep orange sunset",
+   "golden sunset light",
+   "high noon"
+  ]
+ },
+ "palace": {
+  "added_correct_spelling": [],
+  "banned": [
+   "castle",
+   "castles",
+   "chateau",
+   "citadel",
+   "fortress",
+   "manor",
+   "mansion",
+   "mansions",
+   "royal court",
+   "royal courts",
+   "villa"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "palace",
+   "palaces"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "palace",
+   "palaces"
+  ],
+  "targets": [
+   "cathedral naves",
+   "coal mines",
+   "concrete apartment block",
+   "concrete warehouse",
+   "gas station",
+   "log cabin",
+   "modern glass skyscraper",
+   "subway station",
+   "subway stations",
+   "theatre auditorium",
+   "wooden shack"
+  ]
+ },
+ "panda": {
+  "added_correct_spelling": [],
+  "banned": [
+   "baby panda",
+   "bear",
+   "bears",
+   "giant panda",
+   "giant pandas",
+   "panda bear",
+   "panda bears",
+   "polar bear",
+   "red panda",
+   "red pandas"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "panda",
+   "pandas"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "panda",
+   "pandas"
+  ],
+  "targets": [
+   "brown bear",
+   "brown bears",
+   "gorilla",
+   "grey wolves",
+   "koala",
+   "koalas",
+   "tapir",
+   "wild boar"
+  ]
+ },
+ "photorealism": {
+  "added_correct_spelling": [],
+  "banned": [
+   "hyperreal",
+   "hyperrealism",
+   "lifelike",
+   "photoreal",
+   "photorealistic",
+   "realism",
+   "realistic"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "photo realsm",
+   "photorealism"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "photo realsm",
+   "photorealism"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d render",
+   "claymation",
+   "oil painting"
+  ]
+ },
+ "photorealistic": {
+  "added_correct_spelling": [],
+  "banned": [
+   "4k",
+   "4k realistic",
+   "hyperreal",
+   "hyperrealistic",
+   "lifelike",
+   "photoreal",
+   "photorealistic",
+   "real",
+   "realistic"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "photo realistic",
+   "photo-realistic",
+   "photorealistic"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "photo realistic",
+   "photo-realistic",
+   "photorealistic"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d render",
+   "claymation",
+   "oil painting"
+  ]
+ },
+ "pixelart": {
+  "added_correct_spelling": [],
+  "banned": [
+   "16 bit",
+   "16-bit",
+   "8 bit",
+   "pixel art",
+   "retro game art",
+   "sprite art"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "pixel art",
+   "pixelart"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "pixel art",
+   "pixelart"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d render",
+   "live action footage",
+   "oil painting"
+  ]
+ },
+ "pyramids": {
+  "added_correct_spelling": [],
+  "banned": [
+   "burial chamber",
+   "great pyramid",
+   "pyramid",
+   "pyramid tombs",
+   "temple",
+   "tomb",
+   "tombs",
+   "ziggurats"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "piramids",
+   "pyramid",
+   "pyramids"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "piramids",
+   "pyramid",
+   "pyramids"
+  ],
+  "targets": [
+   "domes",
+   "giant sandcastles",
+   "library reading room",
+   "modern glass office lobby",
+   "school gymnasium",
+   "skyscrapers",
+   "windmills"
+  ]
+ },
+ "rabbit": {
+  "added_correct_spelling": [],
+  "banned": [
+   "baby rabbit",
+   "baby rabbits",
+   "bunnies",
+   "bunny",
+   "cottontail",
+   "hare",
+   "hares",
+   "kitten",
+   "lop",
+   "rabbit",
+   "small mammal",
+   "young rabbit"
+  ],
+  "classes": [
+   "inflection",
+   "misspelling"
+  ],
+  "members": [
+   "rabbit",
+   "rabbits",
+   "rabit"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "rabbit",
+   "rabbits",
+   "rabit"
+  ],
+  "targets": [
+   "cat",
+   "cats",
+   "ferret",
+   "ferrets",
+   "fox",
+   "guinea pig",
+   "guinea pigs",
+   "turtle"
+  ]
+ },
+ "raccoon": {
+  "added_correct_spelling": [],
+  "banned": [
+   "badger",
+   "coati",
+   "possum",
+   "raccoon",
+   "racoon",
+   "red panda"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "raccoon",
+   "racoon"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "raccoon",
+   "racoon"
+  ],
+  "targets": [
+   "fox",
+   "monkey",
+   "otter",
+   "porcupine",
+   "skunk"
+  ]
+ },
+ "realistic": {
+  "added_correct_spelling": [],
+  "banned": [
+   "3d render",
+   "hd",
+   "hyper real",
+   "hyper realistic",
+   "hyper-realistic",
+   "hyperrealistic",
+   "in a realistic style",
+   "lifelike",
+   "live action",
+   "photorealistic",
+   "photorealistically",
+   "real",
+   "realistic"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "realisic",
+   "realistic",
+   "realistically",
+   "realisticly"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "realisic",
+   "realistic",
+   "realistically",
+   "realisticly"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d rendered",
+   "as a 2d cartoon animation",
+   "as a 3d render",
+   "as an oil painting",
+   "as claymation",
+   "cartoon animated",
+   "claymation",
+   "claymation stop-motion",
+   "oil painted",
+   "oil painting",
+   "watercolour painting"
+  ]
+ },
+ "robot": {
+  "added_correct_spelling": [],
+  "banned": [
+   "android",
+   "androids",
+   "automaton",
+   "cyborg",
+   "cyborgs",
+   "droid",
+   "humanoid machine",
+   "machine",
+   "machines",
+   "mech"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "robot",
+   "robots"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "robot",
+   "robots"
+  ],
+  "targets": [
+   "angel",
+   "bandaged mummies",
+   "clown",
+   "dragon",
+   "skeletons",
+   "winged dragons"
+  ]
+ },
+ "running": {
+  "added_correct_spelling": [
+   "running"
+  ],
+  "banned": [
+   "jogging",
+   "sprinting",
+   "striding",
+   "walking"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "running",
+   "ruunig"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "ruunig"
+  ],
+  "targets": [
+   "dancing",
+   "fighting",
+   "swimming"
+  ]
+ },
+ "santa claus": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bearded old man in red",
+   "father christmas",
+   "st nicholas"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "santa claus",
+   "santa clouse"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "santa claus",
+   "santa clouse"
+  ],
+  "targets": [
+   "batman",
+   "giant octopus",
+   "godzilla",
+   "king kong",
+   "knight in armour"
+  ]
+ },
+ "scientist": {
+  "added_correct_spelling": [],
+  "banned": [
+   "chemists",
+   "lab technician",
+   "lab technicians",
+   "physicists",
+   "professor",
+   "researcher",
+   "researchers",
+   "scholars"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "scientist",
+   "scientists"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "scientist",
+   "scientists"
+  ],
+  "targets": [
+   "airline pilots in uniform",
+   "astronaut in a spacesuit",
+   "clown in full makeup",
+   "judges in wigs and robes",
+   "matadors in suits of lights",
+   "scarecrow-like farmhand in dungarees"
+  ]
+ },
+ "shark": {
+  "added_correct_spelling": [],
+  "banned": [
+   "fish",
+   "great white",
+   "great white shark",
+   "great white sharks",
+   "hammerhead",
+   "hammerheads",
+   "megalodon",
+   "orca",
+   "predator fish",
+   "predators",
+   "whale"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "shark",
+   "sharks"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "shark",
+   "sharks"
+  ],
+  "targets": [
+   "dolphin",
+   "dolphins",
+   "giant squids",
+   "manta ray",
+   "manta rays",
+   "octopus",
+   "sea turtle",
+   "sea turtles"
+  ]
+ },
+ "ship": {
+  "added_correct_spelling": [],
+  "banned": [
+   "boat",
+   "boats",
+   "freighter",
+   "sailboats",
+   "sailing ship",
+   "spacecraft",
+   "spaceship",
+   "starship",
+   "vessel",
+   "vessels"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "ship",
+   "ships"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "ship",
+   "ships"
+  ],
+  "targets": [
+   "bicycle",
+   "cargo plane",
+   "double-decker bus",
+   "floating docks",
+   "freight train",
+   "hot air balloon",
+   "icebergs",
+   "oil rig",
+   "oil rigs"
+  ]
+ },
+ "skeleton": {
+  "added_correct_spelling": [],
+  "banned": [
+   "bones",
+   "skull creature",
+   "skull figure",
+   "undead"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "skeleton",
+   "skelleton"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "skeleton",
+   "skelleton"
+  ],
+  "targets": [
+   "armoured cyborg",
+   "horned demon",
+   "pale vampire",
+   "robot",
+   "shambling zombie",
+   "translucent ghost"
+  ]
+ },
+ "snowman": {
+  "added_correct_spelling": [],
+  "banned": [
+   "frosty",
+   "ice sculpture",
+   "snow figure",
+   "snow man",
+   "snow person",
+   "snow sculpture",
+   "snowball",
+   "snowman"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "snow man",
+   "snowman"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "snow man",
+   "snowman"
+  ],
+  "targets": [
+   "bonfire",
+   "bronze statue",
+   "cactus",
+   "sandcastle",
+   "scarecrow"
+  ]
+ },
+ "soldiers": {
+  "added_correct_spelling": [],
+  "banned": [
+   "army man",
+   "army men",
+   "fighter",
+   "infantry",
+   "infantryman",
+   "marine",
+   "marines",
+   "military",
+   "military men",
+   "servicemen",
+   "trooper",
+   "troops",
+   "warrior"
+  ],
+  "classes": [
+   "inflection",
+   "misspelling"
+  ],
+  "members": [
+   "soldier",
+   "soldiers",
+   "solider"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "soldier",
+   "soldiers",
+   "solider"
+  ],
+  "targets": [
+   "astronauts in spacesuits",
+   "beekeeper in a white veil",
+   "clowns in full makeup",
+   "construction worker in a hard hat",
+   "cowboy in a wide-brimmed hat",
+   "farmhands in dungarees",
+   "monk in orange robes",
+   "sumo wrestler",
+   "surgeon in scrubs"
+  ]
+ },
+ "spaceship": {
+  "added_correct_spelling": [],
+  "banned": [
+   "mothership",
+   "rockets",
+   "shuttle",
+   "shuttles",
+   "space craft",
+   "spacecraft",
+   "starship",
+   "starships",
+   "ufo",
+   "vessel"
+  ],
+  "classes": [
+   "convention",
+   "inflection"
+  ],
+  "members": [
+   "space ship",
+   "space ships",
+   "spaceship"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "space ship",
+   "space ships",
+   "spaceship"
+  ],
+  "targets": [
+   "hot air balloons",
+   "paper airplanes",
+   "steam locomotive",
+   "submarine",
+   "wooden pirate galleon",
+   "zeppelin",
+   "zeppelins"
+  ]
+ },
+ "spacesuit": {
+  "added_correct_spelling": [],
+  "banned": [
+   "astronaut suit",
+   "eva suit",
+   "space helmet",
+   "spacesuit"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "space suite",
+   "spacesuit"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "space suite",
+   "spacesuit"
+  ],
+  "targets": [
+   "business suit",
+   "heavy winter parka",
+   "knight's plate armour",
+   "pink tutu",
+   "swimming trunks",
+   "yellow hazmat suit"
+  ]
+ },
+ "spiderman": {
+  "added_correct_spelling": [],
+  "banned": [
+   "masked hero",
+   "miles morales",
+   "peter parker",
+   "spider-gwen",
+   "spider-man",
+   "spider-man 2099",
+   "spiderman",
+   "superhero in a red suit"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "spider man",
+   "spider-man",
+   "spiderman"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "spider man",
+   "spider-man",
+   "spiderman"
+  ],
+  "targets": [
+   "a stormtrooper in white armour",
+   "batman",
+   "darth vader",
+   "pikachu",
+   "santa claus",
+   "stormtrooper",
+   "superman"
+  ]
+ },
+ "spongebob": {
+  "added_correct_spelling": [
+   "spongebob"
+  ],
+  "banned": [
+   "cartoon sponge",
+   "patrick star",
+   "squidward"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "spongbob",
+   "spongebob"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "spongbob"
+  ],
+  "targets": [
+   "mario",
+   "spider-man",
+   "yoda"
+  ]
+ },
+ "stars": {
+  "added_correct_spelling": [],
+  "banned": [
+   "comet",
+   "comets",
+   "glowing orb",
+   "meteors",
+   "shooting star",
+   "shooting stars",
+   "warp star"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "star",
+   "stars"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "star",
+   "stars"
+  ],
+  "targets": [
+   "burst of fireworks",
+   "floating embers",
+   "flock of birds",
+   "hot air balloon",
+   "paper lantern",
+   "rain",
+   "snow"
+  ]
+ },
+ "street": {
+  "added_correct_spelling": [],
+  "banned": [
+   "alley",
+   "avenue",
+   "city street",
+   "lane",
+   "pavement",
+   "road",
+   "sidewalk",
+   "street"
+  ],
+  "classes": [
+   "inflection",
+   "misspelling"
+  ],
+  "members": [
+   "steet",
+   "street",
+   "streets"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "steet",
+   "street",
+   "streets"
+  ],
+  "targets": [
+   "beach",
+   "dense forest",
+   "desert dunes",
+   "desert of sand dunes",
+   "frozen lake",
+   "jungle clearing",
+   "open beach",
+   "snowy pine forest"
+  ]
+ },
+ "suit": {
+  "added_correct_spelling": [],
+  "banned": [
+   "blazer",
+   "business attire",
+   "business suit",
+   "formal wear",
+   "suit",
+   "three-piece",
+   "three-piece suit",
+   "tuxedo"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "suit",
+   "suits"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "suit",
+   "suits"
+  ],
+  "targets": [
+   "bathrobe",
+   "clown costume",
+   "clown costumes",
+   "full knight's armour",
+   "heavy winter parkas",
+   "swimming trunks"
+  ]
+ },
+ "sunset": {
+  "added_correct_spelling": [],
+  "banned": [
+   "atardecer",
+   "dawn",
+   "dusk",
+   "dusk falls",
+   "evening",
+   "golden hour",
+   "sun goes down",
+   "sun rises",
+   "sundown",
+   "sunrise",
+   "twilight"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "sun sets",
+   "sunset"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "sun sets",
+   "sunset"
+  ],
+  "targets": [
+   "bright midday sun",
+   "dead of night",
+   "full moon rises",
+   "midday sun blazes",
+   "overcast grey afternoon",
+   "stars come out"
+  ]
+ },
+ "swimming": {
+  "added_correct_spelling": [
+   "swimming"
+  ],
+  "banned": [
+   "floating",
+   "gliding through water",
+   "paddling"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "swiming",
+   "swimming"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "swiming"
+  ],
+  "targets": [
+   "crawling across dry desert sand",
+   "fighting",
+   "walking on a paved road"
+  ]
+ },
+ "sword": {
+  "added_correct_spelling": [],
+  "banned": [
+   "blade",
+   "blades",
+   "katana",
+   "katanas",
+   "longsword",
+   "sabre",
+   "sabres"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "sword",
+   "swords"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "sword",
+   "swords"
+  ],
+  "targets": [
+   "baseball bats",
+   "guitar",
+   "umbrella",
+   "umbrellas",
+   "walking cane",
+   "walking canes"
+  ]
+ },
+ "ultrarealistic": {
+  "added_correct_spelling": [],
+  "banned": [
+   "hyper real",
+   "hyper realistic",
+   "hyperreal",
+   "hyperrealistic",
+   "lifelike",
+   "live action",
+   "photorealistic",
+   "realistic"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "ultra realistic",
+   "ultrarealistic"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "ultra realistic",
+   "ultrarealistic"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d render",
+   "claymation",
+   "oil painting"
+  ]
+ },
+ "underwater": {
+  "added_correct_spelling": [],
+  "banned": [
+   "beneath the surface",
+   "beneath the waves",
+   "in a swimming pool",
+   "in the sea",
+   "submerged"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "under water",
+   "underwater"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "under water",
+   "underwater"
+  ],
+  "targets": [
+   "high in the treetops",
+   "in a burning building",
+   "in a dense forest",
+   "in outer space",
+   "in the desert",
+   "on a desert dune"
+  ]
+ },
+ "unicorn": {
+  "added_correct_spelling": [],
+  "banned": [
+   "horned horses",
+   "horse with a horn",
+   "pegasus",
+   "pony",
+   "white horse",
+   "white stallion",
+   "winged horses"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "unicorn",
+   "unicorns"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "unicorn",
+   "unicorns"
+  ],
+  "targets": [
+   "centaur",
+   "deer",
+   "giant stag",
+   "griffin",
+   "horse",
+   "horses",
+   "pegasi"
+  ]
+ },
+ "velociraptor": {
+  "added_correct_spelling": [],
+  "banned": [
+   "dinosaur",
+   "large lizard",
+   "raptor",
+   "theropod",
+   "utahraptor"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "veloceraptor",
+   "velociraptor"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "veloceraptor",
+   "velociraptor"
+  ],
+  "targets": [
+   "a wild boar",
+   "chicken",
+   "ostrich",
+   "t-rex",
+   "triceratops"
+  ]
+ },
+ "villagers": {
+  "added_correct_spelling": [],
+  "banned": [
+   "commoner",
+   "farmer",
+   "locals",
+   "peasant",
+   "peasants",
+   "people",
+   "scarecrow-like farmhand in dungarees",
+   "townsfolk",
+   "village people"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "villager",
+   "villagers"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "villager",
+   "villagers"
+  ],
+  "targets": [
+   "astronaut in a spacesuit",
+   "beekeepers in white veils",
+   "clown in full makeup",
+   "cowboys in wide-brimmed hats",
+   "judge in a wig and robes",
+   "monks in orange robes",
+   "sumo wrestler"
+  ]
+ },
+ "watercolor": {
+  "added_correct_spelling": [],
+  "banned": [
+   "aquarelle",
+   "gouache",
+   "ink wash",
+   "oil painting",
+   "painted",
+   "pastels"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "watercolor",
+   "watercolors"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "watercolor",
+   "watercolors"
+  ],
+  "targets": [
+   "2d cartoon animation",
+   "3d render",
+   "claymation",
+   "live action footage"
+  ]
+ },
+ "werewolf": {
+  "added_correct_spelling": [],
+  "banned": [
+   "lycanthrope",
+   "werewolf",
+   "wolf-man",
+   "wolfman"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "warewolf",
+   "werewolf"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "warewolf",
+   "werewolf"
+  ],
+  "targets": [
+   "angel",
+   "glowing angel",
+   "hulking stone troll",
+   "industrial robot",
+   "nun",
+   "robot"
+  ]
+ },
+ "wide shot": {
+  "added_correct_spelling": [],
+  "banned": [
+   "full shot",
+   "long shot",
+   "medium shot",
+   "panorama",
+   "wide angle",
+   "wide composition"
+  ],
+  "classes": [
+   "convention"
+  ],
+  "members": [
+   "wide shot",
+   "wide-shot"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "wide shot",
+   "wide-shot"
+  ],
+  "targets": [
+   "aerial shot",
+   "close up",
+   "close-up"
+  ]
+ },
+ "wizard": {
+  "added_correct_spelling": [],
+  "banned": [
+   "mage",
+   "mages",
+   "magician",
+   "sorcerer",
+   "sorcerers",
+   "warlock",
+   "warlocks",
+   "witches"
+  ],
+  "classes": [
+   "inflection"
+  ],
+  "members": [
+   "wizard",
+   "wizards"
+  ],
+  "number_sensitive": true,
+  "observed_in_list": [
+   "wizard",
+   "wizards"
+  ],
+  "targets": [
+   "construction worker in a hard hat",
+   "jockeys in bright silks",
+   "matadors in suits of lights",
+   "nun in a black habit",
+   "surgeon in scrubs",
+   "welders in dark masks"
+  ]
+ },
+ "zoom in": {
+  "added_correct_spelling": [],
+  "banned": [
+   "crash zoom",
+   "dollies in",
+   "dolly in",
+   "push in",
+   "pushes in",
+   "slow zoom"
+  ],
+  "classes": [
+   "misspelling"
+  ],
+  "members": [
+   "zoom in",
+   "zooms in"
+  ],
+  "number_sensitive": false,
+  "observed_in_list": [
+   "zoom in",
+   "zooms in"
+  ],
+  "targets": [
+   "zoom out",
+   "zooms out"
+  ]
+ }
+}

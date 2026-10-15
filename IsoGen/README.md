@@ -104,8 +104,12 @@ generate.write(reordered, "shuffle.mp4", cfg.fps)
 
 `ta_attrib` edits the prompt by looking up `triggers.json`, trigger list v2, a
 frozen list of 1,110 trigger phrases with permitted replacements and the
-dimension each moves.
-No model is involved in the edit, so it is deterministic.
+dimension each moves. `attribute_edit.py` performs the edit. It replaces every
+occurrence of a trigger, gives variants of one word (listed in
+`trigger_classes.json`) the same target, fits case, number and determiner to
+the prompt, and applies at most one edit per dimension. A prompt that cannot
+take `ta_attrib_k` non-overlapping edits is skipped. No model is involved in
+the edit, so it is deterministic.
 
 ## What they look like
 

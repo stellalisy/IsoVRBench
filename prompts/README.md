@@ -12,8 +12,8 @@ VidProM to the train, validation and test splits.
 
 Generation itself, from a prompt to a labeled pair, is [`IsoGen`](../IsoGen).
 
-The scripts need only the Python standard library, except `select_prompts.py`,
-which uses the trigger lookup in `IsoGen/interventions.py` and so needs numpy.
+The scripts need only the Python standard library. `select_prompts.py` uses
+the trigger matching in `IsoGen/attribute_edit.py`.
 
 ## 1. The pool
 
