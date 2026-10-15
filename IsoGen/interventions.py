@@ -4,7 +4,9 @@
 Each takes the anchor, or the prompt that produced it, plus a config, and
 returns the frames of the degraded clip. Nothing here writes files.
 """
+import functools
 import random
+import re
 
 import numpy as np
 
@@ -92,27 +94,38 @@ def ta_attrib(t2v, prompt, triggers, cfg):
     return frames, edited, meta
 
 
+@functools.lru_cache(maxsize=None)
+def _trigger_pattern(trigger):
+    return re.compile(r"(?<![a-z0-9])" + re.escape(trigger.lower()) + r"(?![a-z0-9])")
+
+
+def trigger_match(prompt, trigger):
+    """The first whole-word occurrence of trigger in prompt, ignoring case,
+    so "king" does not fire inside "attacking"."""
+    return _trigger_pattern(trigger).search(prompt.lower())
+
+
 def find_triggers(prompt, triggers, k):
-    """Up to k trigger phrases present in the prompt, longest first so
-    "12 year" wins over "year". Each dimension is used at most once, and
-    entries carrying a review_flag, mostly a wrong dimension label, are
+    """Up to k trigger phrases present in the prompt as whole words, longest
+    first so "12 year" wins over "year". Each dimension is used at most once,
+    and entries carrying a review_flag, mostly a wrong dimension label, are
     skipped."""
-    low, found, used = prompt.lower(), [], set()
+    found, used = [], set()
     for e in sorted(triggers, key=lambda e: -len(e["trigger"])):
         if len(found) >= k:
             break
         d = e.get("dimension")
         if d in used or not e.get("targets") or e.get("review_flag"):
             continue
-        if e["trigger"].lower() in low:
+        if trigger_match(prompt, e["trigger"]):
             found.append((e["trigger"], e["targets"][0], d))
             used.add(d)
     return found
 
 
 def replace_once(prompt, trigger, target):
-    i = prompt.lower().find(trigger.lower())
-    return prompt if i < 0 else prompt[:i] + target + prompt[i + len(trigger):]
+    m = trigger_match(prompt, trigger)
+    return prompt if m is None else prompt[:m.start()] + target + prompt[m.end():]
 
 
 # --- another text to video model, same prompt ------------------------------

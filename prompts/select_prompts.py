@@ -100,8 +100,8 @@ def main():
                 skipped["duplicate"] += 1
                 continue
             seen.add(pr)
-            low = pr.lower()
-            hits = [e for e in triggers if e.get("targets") and e["trigger"].lower() in low]
+            hits = [e for e in triggers
+                    if e.get("targets") and IV.trigger_match(pr, e["trigger"])]
             if not hits:
                 skipped["no trigger"] += 1
                 continue
