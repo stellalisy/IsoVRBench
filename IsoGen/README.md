@@ -102,8 +102,9 @@ generate.write(reordered, "shuffle.mp4", cfg.fps)
 | `mq_hold` | real frames held, giving stuttering motion | motion | nothing |
 | `shuffle` | contiguous segments permuted | motion | nothing |
 
-`ta_attrib` edits the prompt by looking up `triggers.json`, a frozen list of
-1,116 trigger phrases with permitted replacements and the dimension each moves.
+`ta_attrib` edits the prompt by looking up `triggers.json`, trigger list v2, a
+frozen list of 1,110 trigger phrases with permitted replacements and the
+dimension each moves.
 No model is involved in the edit, so it is deterministic.
 
 ## What they look like

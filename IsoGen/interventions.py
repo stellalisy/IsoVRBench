@@ -94,13 +94,15 @@ def ta_attrib(t2v, prompt, triggers, cfg):
 
 def find_triggers(prompt, triggers, k):
     """Up to k trigger phrases present in the prompt, longest first so
-    "12 year" wins over "year". Each dimension is used at most once."""
+    "12 year" wins over "year". Each dimension is used at most once, and
+    entries carrying a review_flag, mostly a wrong dimension label, are
+    skipped."""
     low, found, used = prompt.lower(), [], set()
     for e in sorted(triggers, key=lambda e: -len(e["trigger"])):
         if len(found) >= k:
             break
         d = e.get("dimension")
-        if d in used or not e.get("targets"):
+        if d in used or not e.get("targets") or e.get("review_flag"):
             continue
         if e["trigger"].lower() in low:
             found.append((e["trigger"], e["targets"][0], d))
