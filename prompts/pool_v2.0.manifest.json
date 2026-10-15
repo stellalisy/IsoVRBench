@@ -1,0 +1,34 @@
+{
+  "version": "v2.0",
+  "source": "VidProM_semantic_unique.csv",
+  "source_sha256": "dbdee4a3a7d3d021a7328ca18bd710f33ea85b5fe7f93a78ec73000bbfe7a12c",
+  "script_sha256": "13bacd7f48ce2f1c1f243e61328fb628e45ec7b784be2e6682e5419e78ebd8a6",
+  "rows_scanned": "all",
+  "passed_validity": 896550,
+  "kept": 880052,
+  "rejected_total": 16498,
+  "rejected_by_rule": {
+    "logo_typography": 2286,
+    "foreign_latin": 12974,
+    "dangling_edit": 856,
+    "tool_request": 152,
+    "non_latin_script": 69,
+    "empty_after_clean": 161
+  },
+  "config": {
+    "safety_max": 0.5,
+    "len": [
+      20,
+      400
+    ],
+    "ascii_min": 0.85,
+    "safety_cols": [
+      "toxicity",
+      "obscene",
+      "identity_attack",
+      "insult",
+      "threat",
+      "sexual_explicit"
+    ]
+  }
+}

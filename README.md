@@ -89,6 +89,7 @@ models prompted to score each clip.
 
 | Directory | Contents |
 |---|---|
+| [`prompts/`](prompts) | prompt selection: VidProM filtering, and the prompt-id splits |
 | [`IsoGen/`](IsoGen) | the generation procedure: a prompt in, a labeled pair out |
 | [`IsoVRBench/`](IsoVRBench) | evaluate any reward model on the benchmark |
 | [`reward_training/`](reward_training) | train a reward model on intervention pairs |

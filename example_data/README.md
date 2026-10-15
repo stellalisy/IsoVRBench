@@ -111,8 +111,7 @@ python IsoGen/generate.py --prompts example_data/prompts.jsonl --out /tmp/pairs
 
 Sixty four pairs will not train a reward model. This is for checking that the
 code runs, reading the data format, and seeing what each intervention looks
-like. The corpus behind the paper is 164,000 pairs and the benchmark is 16,000
-in two subsets of 8,000.
+like. The corpus behind the paper is 164,000 pairs and the benchmark is 8,000.
 
-The prompts come from VidProM, filtered and deduplicated. Prompts naming a real
-person or a trademarked character are excluded.
+The prompts come from VidProM, filtered and deduplicated as described in
+[`prompts/`](../prompts).
