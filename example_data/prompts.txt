@@ -7,7 +7,6 @@ Contents videos/<pid>/ holds one clip per intervention. s50.mp4 is the
          anchor; each other file is one controlled change to it, and the
          pair (anchor, variant) is one benchmark item.
 
-Prompts naming a trademarked character or a real person are excluded.
 Every prompt here carries all eight interventions. Two things disqualify
 a prompt from appearing at all: wording that offers fewer than three
 disjoint attribute swaps, which leaves no edited prompt for ta_attrib,
